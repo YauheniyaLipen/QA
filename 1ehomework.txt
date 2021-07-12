@@ -1,0 +1,44 @@
+Linux terminal task:
+1) current working directory (pwd) 
+2) create folder (mkdir a_1)
+3) go into folder (cd a_1)
+4) make three folders (mkdir b_1 b_2 b_3)
+5) Go into any folder (cd b_1)
+6) Create 5 files (3 txt, 2 json) (touch 1.txt 2.txt 3.txt 4.json 5.json)
+7) Create 3 folders (mkdir c1 c2 c3)
+8) view list of the files (ls -la)
+9) open any file.txt (vim 1.txt)
+10) type anything in the file (I)
+11) save and quit (esc :wq)
+12) go for one directory up (cd ..)
+—
+13) move 2 files you created in any folder (mv C:/Users/Vaio/a_1/b_1/1.txt C:/Users/Vaio/a_1/b_1/2.txt C:/Users/Vaio/a_1/b_2
+)
+14) copy any 2 files you created in any folder (cp C:/Users/Vaio/a_1/b_1/4.json C:/Users/Vaio/a_1/b_1/5.json C:/Users/Vaio/a_1)
+15) Find a file by name (find . -name 4.json)
+16) Check the curent status of changes in file (tail -f -n 5 hello.txt)
+17) Print the top number of data from text file (head -n 5 hello.txt)
+18) Print the bottom number of data from text file (tail hello.txt)
+19) View the content of the long text file (less command) (less hello.txt (esc:q)
+20) View date and time (date)
+======= task*
+1) send http request to server.
+https://api.quarantine.country/api/v1/regions
+- curl https://api.quarantine.country/api/v1/regions (curl) 
+2) Write a scenario script which automatically runs 3, 4, 5, 6, 7, 8, 13 steps.
+
+vim new.sh
+i
+#!/bin/bash
+cd b_2
+mkdir z_1 z_2 z_3 
+cd z_1
+touch f.txt g.txt h.txt l.json k.json
+mkdir m_1 m_2 m_3
+ls
+mv f.txt g.txt m_3
+ESC 
+:wq
+enter
+$ bash new.sh
+
